@@ -58,14 +58,14 @@ $listings = [
     <style>
         :root {
             color-scheme: light;
-            --teal-950: #1e3a34;
-            --teal-800: #1b4332;
-            --teal-700: #2d6a4f;
-            --teal-100: #d1e7dd;
-            --teal-50: #f1f8f6;
+            --teal-950: #123b4a;
+            --teal-800: #1e5a6b;
+            --teal-700: #287d8e;
+            --teal-100: #dceef1;
+            --teal-50: #f1f8f9;
             --coral-600: #d9480f;
             --coral-100: #ffe6d5;
-            --ink: #233b3a;
+            --ink: #243a40;
             --muted: #495057;
             --line: #e9ecef;
             --surface: #fff;
@@ -79,7 +79,7 @@ $listings = [
             margin: 0;
             background:
                 radial-gradient(ellipse at 92% 2%, rgba(217,72,15,.045), transparent 28rem),
-                radial-gradient(ellipse at 12% 70%, rgba(45,106,79,.04), transparent 32rem),
+                radial-gradient(ellipse at 12% 70%, rgba(40,125,142,.045), transparent 32rem),
                 var(--canvas);
             background-attachment: fixed;
             color: var(--ink);
@@ -127,10 +127,10 @@ $listings = [
         }
 
         .brand-name { font-size: 19px; font-weight: 750; letter-spacing: -.5px; }
-        .brand-caption { margin-top: 1px; color: #aac5c0; font-size: 11px; }
+        .brand-caption { margin-top: 1px; color: #b6d0d7; font-size: 11px; }
         .brand > span:last-child, .profile > span:last-child { display: grid; }
         .brand-name, .brand-caption, .profile-name, .profile-role, .item-name, .item-detail { display: block; }
-        .nav-label { margin: 0 12px 10px; color: #89aaa4; font-size: 10px; font-weight: 700; letter-spacing: 1.15px; }
+        .nav-label { margin: 0 12px 10px; color: #9bbbc4; font-size: 10px; font-weight: 700; letter-spacing: 1.15px; }
 
         .nav-list { display: grid; gap: 5px; margin-bottom: 30px; }
 
@@ -141,15 +141,15 @@ $listings = [
             gap: 12px;
             padding: 0 12px;
             border-radius: 10px;
-            color: #c3d8d4;
+            color: #d0e0e4;
             font-size: 13px;
             transition: background .18s, color .18s;
         }
 
         .nav-link:hover, .nav-link.active { background: rgba(255,255,255,.11); color: white; }
-        .nav-icon { display: grid; width: 20px; place-items: center; color: #a7c9c3; font-size: 17px; }
+        .nav-icon { display: grid; width: 20px; place-items: center; color: #b0d0d8; font-size: 17px; }
         .nav-link.active .nav-icon { color: #ffbe9c; }
-        .nav-count { margin-left: auto; color: #a9c2bd; font-size: 11px; }
+        .nav-count { margin-left: auto; color: #b6cbd0; font-size: 11px; }
 
         .sidebar-spacer { flex: 1; }
 
@@ -162,7 +162,7 @@ $listings = [
         }
 
         .help-card strong { display: block; margin-bottom: 5px; font-size: 12px; }
-        .help-card p { margin: 0 0 12px; color: #b3ccc7; font-size: 11px; line-height: 1.65; }
+        .help-card p { margin: 0 0 12px; color: #bed1d5; font-size: 11px; line-height: 1.65; }
         .help-card a { color: #ffbe9c; font-size: 11px; font-weight: 700; }
 
         .profile {
@@ -180,14 +180,14 @@ $listings = [
             flex: 0 0 auto;
             place-items: center;
             border-radius: 50%;
-            background: #d9ebe6;
+            background: #dceef1;
             color: var(--teal-800);
             font-size: 11px;
             font-weight: 800;
         }
 
         .profile-name { font-size: 12px; font-weight: 700; }
-        .profile-role { margin-top: 3px; color: #a7c1bb; font-size: 10px; }
+        .profile-role { margin-top: 3px; color: #b5cbd0; font-size: 10px; }
 
         .main-area { min-height: 100vh; margin-left: 246px; }
 
@@ -216,7 +216,7 @@ $listings = [
             border: 1px solid var(--line);
             border-radius: 11px;
             background: white;
-            color: #617673;
+            color: #526b73;
             font-size: 16px;
         }
 
@@ -240,7 +240,7 @@ $listings = [
             border: 0;
             border-radius: 10px;
             background: var(--teal-800);
-            box-shadow: 0 5px 12px rgba(28,93,89,.15);
+            box-shadow: 0 5px 12px rgba(30,90,107,.18);
             color: white;
             font-size: 12px;
             font-weight: 700;
@@ -295,7 +295,7 @@ $listings = [
         .listing-row:last-child { border-bottom: 0; }
         .listing-item { display: flex; min-width: 0; align-items: center; gap: 10px; }
         .item-art { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border-radius: 11px; font-size: 19px; }
-        .item-art.mint { background: #e5f3ee; color: #438477; }
+        .item-art.mint { background: #e2f0f2; color: #287d8e; }
         .item-art.peach { background: #fff0e9; color: #df866b; }
         .item-art.lavender { background: #f0edfa; color: #8172b2; }
         .item-art.blue { background: #eaf2fb; color: #6686b5; }
