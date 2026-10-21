@@ -69,7 +69,7 @@ $listings = [
             --muted: #495057;
             --line: #e9ecef;
             --surface: #fff;
-            --canvas: #fcfbf7;
+            --canvas: #fffff0;
             --shadow: 0 2px 8px rgba(0,0,0,.04);
         }
 
