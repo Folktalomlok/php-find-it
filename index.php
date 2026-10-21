@@ -51,7 +51,7 @@ $listings = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f5f8f7">
+    <meta name="theme-color" content="#fffacd">
     <meta name="description" content="Find It แพลตฟอร์มแจ้งของหายและของที่พบสำหรับนักศึกษาและบุคลากร">
     <title>ภาพรวม | Find It</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -67,17 +67,21 @@ $listings = [
             --coral-100: #fff0eb;
             --ink: #233b3a;
             --muted: #82918f;
-            --line: #e8eeec;
+            --line: #eee9d8;
             --surface: #fff;
-            --canvas: #f5f8f7;
-            --shadow: 0 10px 30px rgba(29, 68, 64, .055);
+            --canvas: #fffacd;
+            --shadow: 0 10px 30px rgba(92, 77, 26, .07);
         }
 
         * { box-sizing: border-box; }
 
         body {
             margin: 0;
-            background: var(--canvas);
+            background:
+                radial-gradient(ellipse at 92% 2%, rgba(232,117,98,.09), transparent 28rem),
+                radial-gradient(ellipse at 12% 70%, rgba(40,116,110,.07), transparent 32rem),
+                var(--canvas);
+            background-attachment: fixed;
             color: var(--ink);
             font-family: "Leelawadee UI", "Noto Sans Thai", Tahoma, sans-serif;
             font-size: 14px;
