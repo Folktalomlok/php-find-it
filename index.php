@@ -6,7 +6,7 @@ $problem = 'นักศึกษาและบุคลากรทำขอ�
 $members = ['นายกิตตศักดิ์ ชละเอม (Developer A)', 'นายธีรภัทร เนื่องจำนงค์ (Developer B)'];
 ?>
 <!DOCTYPE html>
-<html lang="th">
+<ht lang="th">
 <head><meta charset="UTF-8"><title><?php echo $topic; ?></title></head>
 <body>
   <h1><?php echo $topic; ?></h1>
