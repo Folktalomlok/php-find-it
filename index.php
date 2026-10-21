@@ -58,19 +58,19 @@ $listings = [
     <style>
         :root {
             color-scheme: light;
-            --teal-950: #123b3a;
-            --teal-800: #1c5d59;
-            --teal-700: #28746e;
-            --teal-100: #e2f2ef;
+            --teal-950: #1e3a34;
+            --teal-800: #1b4332;
+            --teal-700: #2d6a4f;
+            --teal-100: #d1e7dd;
             --teal-50: #f1f8f6;
-            --coral-600: #e87562;
-            --coral-100: #fff0eb;
+            --coral-600: #d9480f;
+            --coral-100: #ffe6d5;
             --ink: #233b3a;
-            --muted: #82918f;
-            --line: #eee9d8;
+            --muted: #495057;
+            --line: #e9ecef;
             --surface: #fff;
-            --canvas: #fffacd;
-            --shadow: 0 10px 30px rgba(92, 77, 26, .07);
+            --canvas: #fcfbf7;
+            --shadow: 0 2px 8px rgba(0,0,0,.04);
         }
 
         * { box-sizing: border-box; }
@@ -78,8 +78,8 @@ $listings = [
         body {
             margin: 0;
             background:
-                radial-gradient(ellipse at 92% 2%, rgba(232,117,98,.09), transparent 28rem),
-                radial-gradient(ellipse at 12% 70%, rgba(40,116,110,.07), transparent 32rem),
+                radial-gradient(ellipse at 92% 2%, rgba(217,72,15,.045), transparent 28rem),
+                radial-gradient(ellipse at 12% 70%, rgba(45,106,79,.04), transparent 32rem),
                 var(--canvas);
             background-attachment: fixed;
             color: var(--ink);
@@ -148,7 +148,7 @@ $listings = [
 
         .nav-link:hover, .nav-link.active { background: rgba(255,255,255,.11); color: white; }
         .nav-icon { display: grid; width: 20px; place-items: center; color: #a7c9c3; font-size: 17px; }
-        .nav-link.active .nav-icon { color: #ff9b87; }
+        .nav-link.active .nav-icon { color: #ffbe9c; }
         .nav-count { margin-left: auto; color: #a9c2bd; font-size: 11px; }
 
         .sidebar-spacer { flex: 1; }
@@ -163,7 +163,7 @@ $listings = [
 
         .help-card strong { display: block; margin-bottom: 5px; font-size: 12px; }
         .help-card p { margin: 0 0 12px; color: #b3ccc7; font-size: 11px; line-height: 1.65; }
-        .help-card a { color: #ffab98; font-size: 11px; font-weight: 700; }
+        .help-card a { color: #ffbe9c; font-size: 11px; font-weight: 700; }
 
         .profile {
             display: flex;
@@ -262,13 +262,13 @@ $listings = [
         }
 
         .stat-top { display: flex; align-items: center; justify-content: space-between; }
-        .stat-label { color: #71827f; font-size: 11px; font-weight: 600; }
+        .stat-label { color: var(--muted); font-size: 11px; font-weight: 600; }
         .stat-icon { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 10px; font-size: 16px; }
         .stat-icon.teal { background: var(--teal-100); color: var(--teal-700); }
         .stat-icon.coral { background: var(--coral-100); color: var(--coral-600); }
-        .stat-icon.sand { background: #fbf4e5; color: #b98c36; }
-        .stat-icon.blue { background: #eaf1fa; color: #6484b5; }
-        .stat-value { margin-top: 12px; color: var(--teal-950); font-size: 27px; font-weight: 750; letter-spacing: -.5px; line-height: 1; }
+        .stat-icon.sand { background: #d1e7dd; color: #0f5132; }
+        .stat-icon.blue { background: #e2e3e5; color: #41464b; }
+        .stat-value { margin-top: 12px; color: var(--teal-950); font-size: 27px; font-weight: 800; letter-spacing: -.5px; line-height: 1; }
         .stat-foot { display: flex; align-items: center; gap: 5px; margin-top: 9px; color: var(--muted); font-size: 10px; }
         .trend { color: var(--teal-700); font-weight: 750; }
         .trend.coral { color: var(--coral-600); }
@@ -286,9 +286,9 @@ $listings = [
         .filter-button { padding: 7px 11px; border: 0; border-radius: 8px; background: transparent; color: #788986; font-size: 10px; }
         .filter-button:hover, .filter-button.active { background: var(--teal-100); color: var(--teal-800); font-weight: 700; }
 
-        .search-box { display: flex; width: min(210px, 44%); height: 33px; align-items: center; gap: 7px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px; color: #91a09d; }
+        .search-box { display: flex; width: min(210px, 44%); height: 33px; align-items: center; gap: 7px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); }
         .search-box input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 10px; }
-        .search-box input::placeholder { color: #a4b0ae; }
+        .search-box input::placeholder { color: var(--muted); opacity: .8; }
 
         .listing-list { border-top: 1px solid var(--line); }
         .listing-row { display: grid; grid-template-columns: minmax(155px, 1.25fr) minmax(105px, .9fr) minmax(95px, .75fr) auto; align-items: center; gap: 12px; min-height: 73px; padding: 11px 20px; border-bottom: 1px solid #eff3f2; }
@@ -300,11 +300,13 @@ $listings = [
         .item-art.lavender { background: #f0edfa; color: #8172b2; }
         .item-art.blue { background: #eaf2fb; color: #6686b5; }
         .item-name { overflow: hidden; color: #2b403e; font-size: 11px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
-        .item-detail { overflow: hidden; margin-top: 4px; color: #96a29f; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+        .item-detail { overflow: hidden; margin-top: 4px; color: var(--muted); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
         .location-name { color: #526461; font-size: 10px; }
-        .listing-time { margin-top: 4px; color: #9aa6a3; font-size: 9px; }
-        .type-badge { display: inline-flex; align-items: center; justify-content: center; padding: 5px 8px; border-radius: 6px; background: var(--teal-100); color: var(--teal-700); font-size: 9px; font-weight: 700; white-space: nowrap; }
-        .type-badge.lost { background: var(--coral-100); color: #d36b58; }
+        .listing-time { margin-top: 4px; color: var(--muted); font-size: 9px; }
+        .type-badge { display: inline-flex; align-items: center; justify-content: center; padding: 5px 8px; border-radius: 6px; background: #d1e7dd; color: #0f5132; font-size: 9px; font-weight: 700; white-space: nowrap; }
+        .type-badge.lost { background: #ffe6d5; color: #d9480f; }
+        .type-badge.returned { background: #e2e3e5; color: #41464b; }
+        .warn, .alert { border: 1px solid #f5c2c7; background: #f8d7da; color: #842029; }
         .empty-state { display: none; padding: 25px 20px; color: var(--muted); font-size: 12px; text-align: center; }
 
         .side-stack { display: grid; gap: 18px; }
@@ -313,7 +315,7 @@ $listings = [
         .highlight-label { color: #c6e1dc; font-size: 10px; }
         .highlight-number { position: relative; z-index: 1; margin-top: 8px; font-size: 30px; font-weight: 750; letter-spacing: -.7px; }
         .highlight-copy { position: relative; z-index: 1; max-width: 210px; margin: 5px 0 14px; color: #d7e9e5; font-size: 10px; line-height: 1.65; }
-        .highlight-link { position: relative; z-index: 1; color: #ffb19f; font-size: 10px; font-weight: 750; }
+        .highlight-link { position: relative; z-index: 1; color: #ffbe9c; font-size: 10px; font-weight: 750; }
 
         .activity-panel .panel-header { padding-bottom: 11px; }
         .activity-list { padding: 0 19px 7px; }
@@ -323,9 +325,9 @@ $listings = [
         .activity-mark.coral { color: var(--coral-600); }
         .activity-copy { padding-top: 2px; color: #526461; font-size: 10px; line-height: 1.55; }
         .activity-copy strong { color: #304643; font-weight: 700; }
-        .activity-when { margin-top: 4px; color: #9aa6a3; font-size: 9px; }
+        .activity-when { margin-top: 4px; color: var(--muted); font-size: 9px; }
 
-        .footer-note { margin-top: 18px; color: #a1aeab; font-size: 10px; text-align: right; }
+        .footer-note { margin-top: 18px; color: var(--muted); font-size: 10px; text-align: right; }
         .mobile-brand, .mobile-menu { display: none; }
 
         @media (max-width: 1100px) {
@@ -532,7 +534,7 @@ $listings = [
                             </div>
                             <div class="activity-entry">
                                 <span class="activity-mark" aria-hidden="true">♡</span>
-                                <div class="activity-copy"><strong>หูฟังไร้สาย</strong> ส่งคืนเจ้าของแล้ว<div class="activity-when">เมื่อวาน · 16:10 น.</div></div>
+                                <div class="activity-copy"><strong>หูฟังไร้สาย</strong> <span class="type-badge returned">ส่งคืนเจ้าของแล้ว</span><div class="activity-when">เมื่อวาน · 16:10 น.</div></div>
                             </div>
                         </div>
                     </section>
