@@ -54,6 +54,7 @@ $listings = [
     <meta name="theme-color" content="#f5f8f7">
     <meta name="description" content="Find It แพลตฟอร์มแจ้งของหายและของที่พบสำหรับนักศึกษาและบุคลากร">
     <title>ภาพรวม | Find It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
         :root {
             color-scheme: light;
@@ -245,7 +246,7 @@ $listings = [
         .primary-button:hover { background: var(--teal-950); transform: translateY(-1px); }
         .plus { font-size: 19px; font-weight: 400; line-height: 1; }
 
-        .stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; margin-bottom: 19px; }
+        .stats-grid { margin-bottom: 19px; }
 
         .stat-card {
             min-height: 128px;
@@ -268,9 +269,9 @@ $listings = [
         .trend { color: var(--teal-700); font-weight: 750; }
         .trend.coral { color: var(--coral-600); }
 
-        .content-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(250px, .85fr); gap: 18px; align-items: start; }
+        .content-grid { align-items: start; }
         .panel { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
-        .panel-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 19px 20px 15px; }
+        .panel-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 19px 20px 15px; background: var(--surface); }
         .panel-title { margin: 0; color: var(--teal-950); font-size: 14px; font-weight: 750; }
         .panel-subtitle { margin: 5px 0 0; color: var(--muted); font-size: 10px; }
         .text-link { color: var(--teal-700); font-size: 11px; font-weight: 700; white-space: nowrap; }
@@ -328,8 +329,6 @@ $listings = [
             main { padding-right: 28px; padding-left: 28px; }
             .sidebar { width: 218px; }
             .main-area { margin-left: 218px; }
-            .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .content-grid { grid-template-columns: minmax(0, 1.5fr) minmax(220px, .8fr); }
             .listing-row { grid-template-columns: minmax(140px, 1.2fr) minmax(90px, .8fr) auto; }
             .listing-status { display: none; }
         }
@@ -430,35 +429,35 @@ $listings = [
                     <h1 id="page-title">ภาพรวม Find It</h1>
                     <p class="welcome-copy">ช่วยกันตามหาของสำคัญ และส่งคืนให้ถึงมือเจ้าของ</p>
                 </div>
-                <a class="primary-button" href="#listings"><span class="plus" aria-hidden="true">+</span> แจ้งรายการใหม่</a>
+                <a class="primary-button btn btn-primary" href="#listings"><span class="plus" aria-hidden="true">+</span> แจ้งรายการใหม่</a>
             </section>
 
-            <section class="stats-grid" aria-label="สถิติภาพรวม">
-                <article class="stat-card">
+            <section class="stats-grid row g-3" aria-label="สถิติภาพรวม">
+                <div class="col-6 col-xl-3"><article class="stat-card card h-100">
                     <div class="stat-top"><span class="stat-label">รายการทั้งหมด</span><span class="stat-icon teal" aria-hidden="true">▤</span></div>
                     <div class="stat-value">24</div>
                     <div class="stat-foot"><span class="trend">↗ 12%</span> <span>จากสัปดาห์ที่แล้ว</span></div>
-                </article>
-                <article class="stat-card">
+                </article></div>
+                <div class="col-6 col-xl-3"><article class="stat-card card h-100">
                     <div class="stat-top"><span class="stat-label">รอเจ้าของมารับ</span><span class="stat-icon coral" aria-hidden="true">⌕</span></div>
                     <div class="stat-value">08</div>
                     <div class="stat-foot"><span class="trend coral">4 รายการใหม่</span> <span>ในสัปดาห์นี้</span></div>
-                </article>
-                <article class="stat-card">
+                </article></div>
+                <div class="col-6 col-xl-3"><article class="stat-card card h-100">
                     <div class="stat-top"><span class="stat-label">พบของแล้ว</span><span class="stat-icon sand" aria-hidden="true">✓</span></div>
                     <div class="stat-value">16</div>
                     <div class="stat-foot"><span class="trend">↗ 8%</span> <span>จากสัปดาห์ที่แล้ว</span></div>
-                </article>
-                <article class="stat-card">
+                </article></div>
+                <div class="col-6 col-xl-3"><article class="stat-card card h-100">
                     <div class="stat-top"><span class="stat-label">ส่งคืนสำเร็จ</span><span class="stat-icon blue" aria-hidden="true">♡</span></div>
                     <div class="stat-value">12</div>
                     <div class="stat-foot"><span class="trend">ขอบคุณทุกคน</span> <span>ที่ช่วยเหลือกัน</span></div>
-                </article>
+                </article></div>
             </section>
 
-            <div class="content-grid">
-                <section class="panel" id="listings" aria-labelledby="listings-title">
-                    <div class="panel-header">
+            <div class="content-grid row g-3">
+                <section class="panel card col-12 col-lg-8" id="listings" aria-labelledby="listings-title">
+                    <div class="panel-header card-header">
                         <div>
                             <h2 class="panel-title" id="listings-title">รายการล่าสุด</h2>
                             <p class="panel-subtitle">ติดตามของหายและของที่พบในพื้นที่</p>
@@ -467,13 +466,13 @@ $listings = [
                     </div>
                     <div class="listing-tools">
                         <div class="filters" role="group" aria-label="กรองรายการ">
-                            <button class="filter-button active" type="button" data-filter="ทั้งหมด" aria-pressed="true">ทั้งหมด</button>
-                            <button class="filter-button" type="button" data-filter="ของหาย" aria-pressed="false">ของหาย</button>
-                            <button class="filter-button" type="button" data-filter="พบของ" aria-pressed="false">พบของ</button>
+                            <button class="filter-button btn btn-sm active" type="button" data-filter="ทั้งหมด" aria-pressed="true">ทั้งหมด</button>
+                            <button class="filter-button btn btn-sm" type="button" data-filter="ของหาย" aria-pressed="false">ของหาย</button>
+                            <button class="filter-button btn btn-sm" type="button" data-filter="พบของ" aria-pressed="false">พบของ</button>
                         </div>
                         <label class="search-box">
                             <span aria-hidden="true">⌕</span>
-                            <input id="listing-search" type="search" placeholder="ค้นหาชื่อหรือสถานที่" aria-label="ค้นหารายการ">
+                            <input class="form-control form-control-sm" id="listing-search" type="search" placeholder="ค้นหาชื่อหรือสถานที่" aria-label="ค้นหารายการ">
                         </label>
                     </div>
                     <div class="listing-list" id="listing-list">
@@ -491,7 +490,7 @@ $listings = [
                                     <div class="listing-time"><?= htmlspecialchars($listing['time'], ENT_QUOTES, 'UTF-8') ?></div>
                                 </div>
                                 <div class="listing-status">
-                                    <span class="type-badge <?= $listing['type'] === 'ของหาย' ? 'lost' : '' ?>"><?= htmlspecialchars($listing['type'], ENT_QUOTES, 'UTF-8') ?></span>
+                                    <span class="type-badge badge <?= $listing['type'] === 'ของหาย' ? 'lost' : '' ?>"><?= htmlspecialchars($listing['type'], ENT_QUOTES, 'UTF-8') ?></span>
                                 </div>
                                 <div class="listing-status">
                                     <span class="avatar" title="<?= htmlspecialchars($listing['name'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($listing['initials'], ENT_QUOTES, 'UTF-8') ?></span>
@@ -502,16 +501,16 @@ $listings = [
                     </div>
                 </section>
 
-                <aside class="side-stack">
-                    <section class="panel highlight-card" aria-labelledby="highlight-title">
+                <aside class="side-stack col-12 col-lg-4">
+                    <section class="panel highlight-card card" aria-labelledby="highlight-title">
                         <div class="highlight-label" id="highlight-title">พลังของชุมชน</div>
                         <div class="highlight-number">12 <span style="font-size:15px;font-weight:600">ชิ้น</span></div>
                         <p class="highlight-copy">สิ่งของที่ได้กลับคืนสู่เจ้าของ ด้วยความช่วยเหลือจากทุกคน</p>
                         <a class="highlight-link" href="#activity">ดูความเคลื่อนไหว <span aria-hidden="true">→</span></a>
                     </section>
 
-                    <section class="panel activity-panel" id="activity" aria-labelledby="activity-title">
-                        <div class="panel-header">
+                    <section class="panel activity-panel card" id="activity" aria-labelledby="activity-title">
+                        <div class="panel-header card-header">
                             <div>
                                 <h2 class="panel-title" id="activity-title">กิจกรรมล่าสุด</h2>
                                 <p class="panel-subtitle">อัปเดตจากชุมชน</p>
@@ -539,6 +538,7 @@ $listings = [
         </main>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script>
     (() => {
         const rows = Array.from(document.querySelectorAll('.listing-row'));
