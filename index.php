@@ -51,7 +51,7 @@ $listings = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fffacd">
+    <meta name="theme-color" content="#4d0f04">
     <meta name="description" content="Find It แพลตฟอร์มแจ้งของหายและของที่พบสำหรับนักศึกษาและบุคลากร">
     <title>ภาพรวม | Find It</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -69,7 +69,7 @@ $listings = [
             --muted: #495057;
             --line: #e9ecef;
             --surface: #fff;
-            --canvas: #fffff0;
+            --canvas: #4d0f04;
             --shadow: 0 2px 8px rgba(0,0,0,.04);
         }
 
@@ -77,12 +77,9 @@ $listings = [
 
         body {
             margin: 0;
-            background:
-                radial-gradient(ellipse at 92% 2%, rgba(217,72,15,.045), transparent 28rem),
-                radial-gradient(ellipse at 12% 70%, rgba(40,125,142,.045), transparent 32rem),
-                var(--canvas);
+            background: var(--canvas);
             background-attachment: fixed;
-            color: var(--ink);
+            color: #fff4ef;
             font-family: "Leelawadee UI", "Noto Sans Thai", Tahoma, sans-serif;
             font-size: 14px;
             -webkit-font-smoothing: antialiased;
@@ -225,9 +222,9 @@ $listings = [
         main { width: min(1320px, 100%); margin: 0 auto; padding: 32px 42px 48px; }
 
         .welcome-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 25px; }
-        .eyebrow { margin: 0 0 7px; color: var(--teal-700); font-size: 11px; font-weight: 750; letter-spacing: .8px; text-transform: uppercase; }
-        h1 { margin: 0; color: var(--teal-950); font-size: clamp(24px, 2.5vw, 30px); font-weight: 750; letter-spacing: -.8px; }
-        .welcome-copy { margin: 7px 0 0; color: var(--muted); font-size: 12px; }
+        .eyebrow { margin: 0 0 7px; color: #ffc6ae; font-size: 11px; font-weight: 750; letter-spacing: .8px; text-transform: uppercase; }
+        h1 { margin: 0; color: #fff4ef; font-size: clamp(24px, 2.5vw, 30px); font-weight: 750; letter-spacing: -.8px; }
+        .welcome-copy { margin: 7px 0 0; color: #ead6cf; font-size: 12px; }
 
         .primary-button {
             display: inline-flex;
@@ -327,7 +324,7 @@ $listings = [
         .activity-copy strong { color: #304643; font-weight: 700; }
         .activity-when { margin-top: 4px; color: var(--muted); font-size: 9px; }
 
-        .footer-note { margin-top: 18px; color: var(--muted); font-size: 10px; text-align: right; }
+        .footer-note { margin-top: 18px; color: #d8beb6; font-size: 10px; text-align: right; }
         .mobile-brand, .mobile-menu { display: none; }
 
         @media (max-width: 1100px) {
